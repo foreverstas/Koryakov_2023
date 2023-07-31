@@ -1,0 +1,8 @@
+#hisat2 genome index were prepared based on UCSC DM6 assembly as follows
+
+cd "path/to/genome/index/directory"
+wget https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz
+gzip -d dm6.fa.gz
+mkdir HISAT2
+cd HISAT2
+hisat2-build -p 70 ../dm6.fa DM6

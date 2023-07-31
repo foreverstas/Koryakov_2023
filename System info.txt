@@ -1,0 +1,23 @@
+Linux version 5.15.0-3-amd64 (debian-kernel@lists.debian.org) (gcc-11 (Debian 11.2.0-14) 11.2.0, GNU ld (GNU Binutils for Debian) 2.37.90.20220123) #1 SMP Debian 5.15.15-2 (2022-01-30)
+
+Version of anaconda:
+conda	22.9.0
+
+List of conda packages used:
+Name                    Version                   Build  Channel
+hisat2                    2.2.1                h87f3376_4    bioconda
+samtools                  1.6                  hcd7b337_9    bioconda
+bamscale                  0.0.5                h18f8b1d_1    bioconda
+salmon                    0.8.1                         0    bioconda
+python                    3.9.9           h62f1059_0_cpython    conda-forge
+
+featureCounts veision:
+featureCounts	2.0.3
+
+SalmonTE version (cloned from https://github.com/hyunhwaj/SalmonTE using git):
+SalmonTE 0.4
+
+R version:
+R version 4.1.2 (2021-11-01)
+Platform: x86_64-pc-linux-gnu (64-bit)
+

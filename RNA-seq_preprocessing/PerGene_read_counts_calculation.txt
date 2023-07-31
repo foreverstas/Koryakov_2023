@@ -1,0 +1,10 @@
+#Per gene read counts were calculated as follows:
+
+#Download annotation file
+wget https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/genes/dm6.ensGene.gtf.gz
+gzip -d dm6.ensGene.gtf.gz
+
+#Run featureCounts for each bam file separately
+featureCounts -a dm6.ensGene.gtf -p -P -d 50 -D 1000 -B -T 64 -s 2 -o "FeatureCounts_output/output_file" "path/to/bam/alignmet" 
+
+#Result data frames are provided in FeatureCounts_output

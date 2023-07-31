@@ -1,0 +1,22 @@
+#Preparation of RNA-seq coverage profiles for Fig.S3 and Fig.S6.
+
+#On the first step all bam thriplicates (Salivary Glangd or Imaginal Discs of ORegon and Double Mutants) were merged as follows
+
+samtools merge -@ 70 -o "path/to/ID-OR.merged.bam"  "path/to/ID-OR1.bam" "path/to/ID-OR2.bam" "path/to/ID-OR1.bam"
+samtools index -@ 70 "path/to/ID-OR.merged.bam"
+
+samtools merge -@ 70 -o "path/to/ID-DM.merged.bam"  "path/to/ID-DM1.bam" "path/to/ID-DM2.bam" "path/to/ID-DM3.bam"
+samtools index -@ 70 "path/to/ID-OR.merged.bam"
+
+samtools merge -@ 70 -o "path/to/SG-OR.merged.bam" "path/to/SG-OR1.bam" "path/to/SG-OR2.bam""path/to/SG-OR3.bam"
+samtools index -@ 70 "path/to/SG-DM_merged.bam"
+
+samtools merge -@ 70 -o "path/to/SG-DM..merged.bam" "path/to/SG-DM1.bam" "path/to/SG-DM2.bam""path/to/SG-DM3.bam"
+samtools index -@ 70 "path/to/ID-DM.merged.bam"
+
+#Next each merged RNA-seq bam file was converted to coverage track using BAMscale
+
+BAMscale scale --bam "path/to/ID-OR.merged.bam" --operation rna
+BAMscale scale --bam "path/to/ID-DM.merged.bam" --operation rna
+BAMscale scale --bam "path/to/SG-OR.merged.bam" --operation rna
+BAMscale scale --bam "path/to/SG-DM.merged.bam" --operation rna

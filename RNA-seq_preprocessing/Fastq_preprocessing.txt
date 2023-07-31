@@ -1,0 +1,4 @@
+#All libraries were prepared using Truseq adapters
+#Adapter removal was made using cutadapt version 4.1 made as follows:
+cutadapt -j 70 -u 15 -U 15 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -o "path/to/R1/trimmed.fastq.gz" -p "path/to/R2/trimmed.fastq.gz"  "path/to/R1/fastq/file"  "path/to/R2/fastq/file"
+
