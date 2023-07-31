@@ -1,6 +1,6 @@
 #Adapter-trimmed RNA-seq reads were aligned to DM6 assembly using hisat2 version 2.2.1 as follows:
 
-hisat2 --phred33 -q -p 40 -x /home/romanov/programs/GenomeAssemblies/DM6/UCSC/HISAT2/DM6 -1 "path/to/R1.fastq.gz" -2 "path/to/R2.fastq.gz" -S "path/to/write/sam/alignment" --no-discordant --summary-file "path/to/write/summary/file" 2>"path/to/write/hisat2/log.txt"; 
+hisat2 --phred33 -q -p 40 -x "path/to/genome/index/directory/HISAT2" -1 "path/to/R1.fastq.gz" -2 "path/to/R2.fastq.gz" -S "path/to/write/sam/alignment" --no-discordant --summary-file "path/to/write/summary/file" 2>"path/to/write/hisat2/log.txt"; 
 
 #Sam file sorting and bam-conversion were made using samtools:
  
